@@ -1,2 +1,6 @@
 # modulesuitebranding
-An example Netbeans Platform application that illustrates problem of trying to perform branding of strings defined in custom module suites.
+This application is an example of the case where one wants to apply branding to bundle strings defined in an included module suite. In this example, the Netbeans Platform application MyBrandedApp is pulling in the module suite MyModuleSuite. MyModuleSuite includes one module (MyCoolModule) which in turn defines a single class (MyClassWithBrandableText.java). The @Messages annotation is used inside the MyClassWithBrandableText class to specify the LBL_MY_BRANDABLE_TEXT bundle string which is a greeting message parameterized by the name of a person. The MyBrandedApp has a module named AppModule that presents the greeting (using DialogDisplayer) after the application starts.
+
+The desire is to use branding to modify the LBL_MY_BRANDABLE_TEXT string for use with the MyBrandedApp application. For example, branding the LBL_MY_BRANDABLE_TEXT to be "What is up {0}?" instead of the specified value defined in MyClassWithBrandableText ("Hello There {0}").
+
+The issue is that when I select the "Branding..." context menu option on the MyBrandedApp project and go to the "Resource Bundles" tab, there is no reference to the LBL_MY_BRANDABLE_TEXT that would allow me to apply branding for that string. What do I need to do to make the LBL_MY_BRANDABLE_TEXT show up under the "Resource Bundles" tab?
