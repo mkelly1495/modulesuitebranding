@@ -17,13 +17,13 @@ public class Installer extends ModuleInstall
     @Override
     public void restored()
     {
-        WindowManager.getDefault().invokeWhenUIReady(() -> {
-            MyClassWithBrandableText obj = new MyClassWithBrandableText();
-
-            DialogDescriptor dd = new DialogDescriptor(null, obj.getGreeting("Mike Kelly"));
-
-            DialogDisplayer.getDefault().notifyLater(dd);
-        });
+//        WindowManager.getDefault().invokeWhenUIReady(() -> {
+//            MyClassWithBrandableText obj = new MyClassWithBrandableText();
+//
+//            DialogDescriptor dd = new DialogDescriptor(null, obj.getGreeting("Mike Kelly"));
+//
+//            DialogDisplayer.getDefault().notifyLater(dd);
+//        });
     }
 
 }
